@@ -13,7 +13,7 @@ function templateConsole( ... ar ) {
 
 function World() { 
 	if ( ! this instanceof World ) 
-	{ return } 
+		{ return } 
 	// -- if ! instanceof World 
 
 	return new class World { 
