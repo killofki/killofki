@@ -14,7 +14,7 @@ function templateConsole( ... ar ) {
 function World( ... ar ) { 
 	if ( ! this instanceof World ) 
 		{ return } 
-	// -- if ! instanceof World 
+		// -- if ! instanceof World 
 	World = class World extends String { // -- lazy 
 		constructor( ... ar ) { 
 			let { length } = ar 
