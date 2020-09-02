@@ -22,7 +22,7 @@ function World( ... ar ) {
 				ar = [ 'World' ] 
 				} // -- if ! length 
 			super( ... ar ) 
-			} 
+			} // -- constructor() 
 		} // -- World{} 
 	
 	return new World( ... ar ) // call 
