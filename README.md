@@ -1,6 +1,5 @@
 ```
-{ 
-/// 
+{ /// 
 
 templateConsole `Hello, ${ new World() }!` 
 
@@ -33,6 +32,5 @@ function rawValue( ... ar ) {
 	return rawo ?.raw ? String .raw( ... ar ) : rawo 
 	} // -- rawValue() 
 
-/// 
-} 
+} /// 
 ``` 
