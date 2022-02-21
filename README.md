@@ -11,14 +11,15 @@ function templateConsole( ... ar ) {
 	console .log( t ) 
 	} // --- templateConsole() 
 
-function World() { 
+function World( ... ar ) { 
 	if ( ! this instanceof World ) 
 		{ return } 
 	// -- if ! instanceof World 
-
-	return new class World { 
+	World = class World { // -- lazy 
 		toString() { return 'World' } 
 		} // -- World{} 
+	
+	return new World( ... ar ) // call 
 	} // -- World() 
 
 function rawValue( ... ar ) { 
