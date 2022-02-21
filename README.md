@@ -14,9 +14,15 @@ function templateConsole( ... ar ) {
 function World( ... ar ) { 
 	if ( ! this instanceof World ) 
 		{ return } 
-	// -- if ! instanceof World 
-	World = class World { // -- lazy 
-		toString() { return 'World' } 
+		// -- if ! instanceof World 
+	World = class World extends String { // -- lazy 
+		constructor( ... ar ) { 
+			let { length } = ar 
+			if ( ! length ) { 
+				ar = [ 'World' ] 
+				} // -- if ! length 
+			super( ... ar ) 
+			} // -- constructor() 
 		} // -- World{} 
 	
 	return new World( ... ar ) // call 
