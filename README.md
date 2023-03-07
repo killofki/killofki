@@ -11,17 +11,25 @@ function templateConsole( ... ar ) {
 	} // --- templateConsole() 
 
 function World( ... ar ) { 
+	const originWorld = World 
+	
 	World = class World extends String { // -- lazy 
 		constructor( ... ar ) { 
-			const { length } = ar 
-			if ( ! length ) { 
-				ar = [ 'World' ] 
-				} // -- if ! length 
-			super( ... ar ) 
+			ar .length ? super( ... ar ) : super( 'World' ) 
 			} // -- constructor() 
 		} // -- World{} 
 	
-	return new World( ... ar ) // call 
+	switch( true ) { 
+		case this instanceof originWorld : 
+			return new World( ... ar ) // call 
+		
+		case World === originWorld : 
+			throw 'not completed lazy about assign class World' 
+		
+		default : 
+			return World( ... ar ) // call 
+		} // -- switch true 
+	
 	} // -- World() 
 
 function rawValue( ... ar ) { 
