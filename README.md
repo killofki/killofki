@@ -5,36 +5,43 @@ templateConsole `Hello, ${ new World() }!`
 
 // .. functions .. 
 
-function templateConsole( ... ar ) { 
-	const t = rawValue( ... ar ) 
-	console .log( t ) 
-	} // --- templateConsole() 
-
 function World( ... ar ) { 
-	const originWorld = World 
+	// saveOrigin 
+	let originWorld = World 
 	
-	World = class World extends String { // -- lazy 
+	wakeUpHero : World = class World extends String { // -- lazy 
 		constructor( ... ar ) { 
-			ar .length ? super( ... ar ) : super( 'World' ) 
+			templateFlowParty : ar .length 
+				? super( ... ar ) 
+				: super( 'World' ) 
 			} // -- constructor() 
 		} // -- World{} 
 	
-	switch( true ) { 
+	trueRoom : switch( true ) { 
 		case this instanceof originWorld : 
 			return new World( ... ar ) // call 
 		
+		// sleepingHero 
 		case World === originWorld : 
 			throw 'not completed lazy about assign class World' 
 		
+		// others ..? 
 		default : 
 			return World( ... ar ) // call 
 		} // -- switch true 
 	
 	} // -- World() 
 
+function templateConsole( ... ar ) { 
+	// receivingConsoleWords 
+	const t = rawValue( ... ar ) 
+	console .log( t ) 
+	} // --- templateConsole() 
+
 function rawValue( ... ar ) { 
 	const [ rawo ] = ar 
-	return rawo ?.raw ? String .raw( ... ar ) 
+	withTemplateParty : return rawo ?.raw 
+		? String .raw( ... ar ) 
 		: rawo 
 	} // -- rawValue() 
 
