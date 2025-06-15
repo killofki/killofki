@@ -1,4 +1,4 @@
-```
+``` 
 { /// 
 
 templateConsole `Hello, ${ new World() }!` 
@@ -7,15 +7,15 @@ templateConsole `Hello, ${ new World() }!`
 
 function World( ... ar ) { 
 	// saveOrigin 
-	let originWorld = World 
+	const originWorld = World 
 	
 	wakeUpHero : World = class World extends String { // -- lazy 
 		constructor( ... ar ) { 
-			templateFlowParty : ar .length 
-				? super( ... ar ) 
+			; 
+				templateFlowParty : ar .length ? super( ... ar ) 
 				: super( 'World' ) 
 			} // -- constructor() 
-		} // -- World{} 
+		} // -- World{} // -- wakeUpHero 
 	
 	trueRoom : switch( true ) { 
 		case this instanceof originWorld : 
@@ -28,20 +28,18 @@ function World( ... ar ) {
 		// others ..? 
 		default : 
 			return World( ... ar ) // call 
-		} // -- switch true 
+		} // -- switch true // -- trueRoom 
 	
 	} // -- World() 
 
-function templateConsole( ... ar ) { 
-	// receivingConsoleWords 
+function templateConsole( ... ar ) { // receivingConsoleWords 
 	const t = rawValue( ... ar ) 
 	console .log( t ) 
 	} // --- templateConsole() 
 
-function rawValue( ... ar ) { 
+function rawValue( ... ar ) { // withTemplateParty 
 	const [ rawo ] = ar 
-	withTemplateParty : return rawo ?.raw 
-		? String .raw( ... ar ) 
+	return rawo ?.raw ? String .raw( ... ar ) 
 		: rawo 
 	} // -- rawValue() 
 
